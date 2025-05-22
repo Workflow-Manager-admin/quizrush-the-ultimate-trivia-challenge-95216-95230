@@ -1,0 +1,333 @@
+/* Component Styles for QuizRush */
+
+/* Timer Component */
+.timer-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.timer-bar-container {
+  width: 100%;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.timer-bar {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s linear;
+}
+
+.timer-text {
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+  font-weight: bold;
+}
+
+/* Quiz Header */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.logo-symbol {
+  color: var(--kavia-orange);
+  font-size: 1.2em;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.progress-container {
+  text-align: center;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: var(--text-secondary);
+}
+
+.progress-bar-container {
+  width: 120px;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--kavia-orange);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Score Card */
+.score-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.score, .streak {
+  text-align: center;
+}
+
+.score span, .streak span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.score-value {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.streak-value {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #FF9800;
+}
+
+.score-increase {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Quiz Question */
+.quiz-question {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.question-category {
+  font-size: 0.9rem;
+  color: var(--kavia-orange);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/* Answer Options */
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer-option {
+  padding: 16px 20px;
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.answer-option:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.answer-option.selected {
+  border-color: var(--kavia-orange);
+  background-color: rgba(232, 122, 65, 0.15);
+}
+
+.answer-option.correct {
+  border-color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.15);
+  animation: correct-answer 0.5s ease;
+}
+
+.answer-option.incorrect {
+  border-color: #F44336;
+  background-color: rgba(244, 67, 54, 0.15);
+  animation: incorrect-answer 0.5s ease;
+}
+
+@keyframes correct-answer {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(5px); }
+  30% { transform: translateX(-5px); }
+  45% { transform: translateX(3px); }
+  60% { transform: translateX(-3px); }
+  75% { transform: translateX(2px); }
+  90% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes incorrect-answer {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Category and Difficulty Selectors */
+.category-select {
+  margin-bottom: 20px;
+}
+
+.category-dropdown {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.difficulty-select {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.difficulty-btn {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.difficulty-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.difficulty-btn.selected {
+  border-color: var(--kavia-orange);
+  background-color: rgba(232, 122, 65, 0.15);
+}
+
+.difficulty-name {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.difficulty-time {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Game Over */
+.game-over-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.game-over-content {
+  text-align: center;
+  padding: 40px;
+  background-color: var(--kavia-dark);
+  border-radius: 16px;
+  border: 2px solid var(--kavia-orange);
+  animation: fade-in 0.5s ease;
+}
+
+.final-score-preview {
+  margin: 30px 0;
+}
+
+.large-score {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--kavia-orange);
+  margin: 15px 0;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--kavia-orange);
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .quiz-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .progress-container {
+    margin: 10px 0;
+  }
+  
+  .progress-bar-container {
+    margin: 0 auto;
+  }
+  
+  .difficulty-select {
+    flex-direction: column;
+  }
+}
