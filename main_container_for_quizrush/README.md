@@ -1,13 +1,42 @@
-# Lightweight React Template for KAVIA
+# QuizRush: The Ultimate Trivia Challenge
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+A fast-paced, adrenaline-pumping trivia game that challenges players to answer questions from various categories while racing against the clock. Players test their knowledge across multiple domains, competing to become the ultimate trivia champion.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- **Fast-Paced Gameplay**: Answer questions before time runs out!
+- **Multiple Categories**: Test your knowledge across various domains, from Science to Entertainment
+- **Difficulty Levels**: Choose from Easy, Medium, and Hard difficulty settings
+- **Score System**: Earn points for correct answers, with bonuses for quick responses and answer streaks
+- **High Score Tracking**: See how you rank against previous attempts
+- **Responsive Design**: Play on any device - desktop, tablet, or mobile
+
+## How to Play
+
+1. **Start Screen**: Choose a category and difficulty level
+2. **Game Screen**: Answer questions before the timer runs out
+3. **Results Screen**: View your score and see if you made the high score list
+
+## Time-Based Scoring
+
+- **Base Points**: 10 points per correct answer
+- **Time Bonus**: The faster you answer, the more points you earn
+- **Streak Bonus**: Get multiple answers correct in a row for a 1.5x multiplier
+
+## Available Categories
+
+- General Knowledge
+- Entertainment (Books, Film, Music, TV, Video Games)
+- Science & Nature
+- Computers
+- Mathematics
+- Sports
+- Geography
+- History
+- Politics
+- Animals
+- Vehicles
+- Anime & Manga
 
 ## Getting Started
 
@@ -24,59 +53,20 @@ Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
+
+## Technologies Used
+
+- React
+- CSS for styling (no external UI libraries)
+- Open Trivia Database API for questions
 
 ## Customization
 
-### Colors
+The game can be easily customized by modifying the constants in `src/utils/constants.js`:
+- Change difficulty levels
+- Adjust scoring parameters
+- Modify time limits
+- Add or remove categories
 
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
-```
-
-### Components
-
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
-
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
-
-## Learn More
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy the game and challenge your knowledge!
