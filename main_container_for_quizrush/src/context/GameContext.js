@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useReducer, useEffect } from 'react';
+import React, { createContext, useContext, useReducer } from 'react';
 import { GAME_STATES, DEFAULT_SETTINGS } from '../utils/constants';
 import { fetchQuestions } from '../utils/helpers';
 

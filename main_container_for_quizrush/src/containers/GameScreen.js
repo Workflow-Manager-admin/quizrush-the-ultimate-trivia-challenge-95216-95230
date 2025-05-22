@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import QuizHeader from '../components/QuizHeader';
 import QuizQuestion from '../components/QuizQuestion';
 import { useGame } from '../context/GameContext';
@@ -8,7 +8,7 @@ import { useGame } from '../context/GameContext';
  * Shows the current question, timer, and score
  */
 const GameScreen = () => {
-  const { state, isGameActive } = useGame();
+  const { state } = useGame();
   const { loading, error, questions } = state;
   
   // If game is still loading questions
